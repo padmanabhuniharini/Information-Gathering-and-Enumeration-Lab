@@ -1,60 +1,118 @@
 Information Gathering and Enumeration Lab
-Objective
 
-To perform reconnaissance, enumeration, and vulnerability assessment on a target system in a controlled laboratory environment.
+Objective
+To perform reconnaissance, service enumeration, information gathering, and vulnerability assessment on a target system in a controlled laboratory environment using industry-standard cybersecurity tools.
 
 Tools Used
 
+* Kali Linux
 * Nmap
 * SMBClient
 * Enum4linux
 * theHarvester
-* Nessus
-* Kali Linux
+* Nessus Essentials
 
 Activities Performed
+1. Host Discovery
+Performed host discovery using Nmap to determine whether the target system was active and reachable
 
-Host Discovery
-Performed host discovery to determine whether the target system was active and reachable.
+Command Used
+nmap -sn testphp.vulnweb.com
 
-Service Detection
-Conducted service and version detection to identify exposed network services.
 
-SMB Enumeration
-Attempted enumeration of SMB services, shares, users, and system information.
+Result
+The target host responded successfully, confirming that it was online and available for further assessment.
 
-Open-Source Intelligence (OSINT)
-Used theHarvester to collect publicly available information related to the target domain.
+2. Service Detection
+Conducted service and version detection to identify open ports and running services on the target system.
 
-Vulnerability Assessment
-Configured and executed a Nessus vulnerability scan to identify security weaknesses.
+Command Used
+nmap -sV testphp.vulnweb.com
 
-Results
+Result
+The target was reachable; however, all scanned ports were filtered, indicating the possible presence of firewall or security filtering mechanisms.
 
-* Confirmed target availability.
-* Gathered service information.
-* Identified publicly accessible resources.
-* Performed vulnerability assessment using Nessus.
-* Documented findings and observations.
+3. SMB Enumeration
+Attempted to enumerate SMB services, shares, users, and system information.
+
+Commands Used
+smbclient -L //testphp.vulnweb.com -N
+
+enum4linux -a testphp.vulnweb.com
+
+
+Result
+SMB enumeration was unsuccessful because the target did not respond to SMB requests, indicating restricted or unavailable SMB services.
+
+ 4. Open Source Intelligence (OSINT)
+Gathered publicly available information about the target domain using theHarvester.
+
+Command Used
+theHarvester -d testphp.vulnweb.com -b all
+
+Result
+No email addresses were discovered. However, useful URLs related to the target were identified.
+
+Discovered Resources
+
+* http://testphp.vulnweb.com/
+* http://testphp.vulnweb.com/login.php
+* https://testphp.vulnweb.com/
+
+5. Vulnerability Assessment
+Installed and configured Nessus Essentials to perform vulnerability scanning.
+
+Activities
+
+* Installed Nessus
+* Started Nessus service
+* Verified Nessus status
+* Performed a vulnerability assessment scan
+
+Result
+The scan completed successfully and reported no vulnerabilities on the selected target.
 
 Skills Demonstrated
 
-* Information Gathering
-* OSINT
-* Network Enumeration
+* Network Reconnaissance
+* Host Discovery
+* Service Detection
 * Service Enumeration
 * SMB Enumeration
+* OSINT (Open Source Intelligence)
 * Vulnerability Assessment
 * Security Analysis
+* Nessus Administration
 
 Screenshots
+ 1. Host Discovery
+Performed host discovery using Nmap to verify whether the target host was active and reachable.
+![Host Discovery](screenshots/host-discovery.jpg)
 
-* Host Discovery Results
-* Service Detection Results
-* SMB Enumeration Results
-* theHarvester Results
-* Nessus Scan Results
+2. Service Detection
+Executed service and version detection to identify exposed services and determine whether open ports were available on the target.
+![Service Detection](screenshots/service-detection.jpg)
+
+
+3. SMB Enumeration
+Attempted SMB enumeration using SMBClient and Enum4linux to identify shares, users, and system information.
+![SMB Enumeration](screenshots/smb-enumeration.jpg)
+
+
+4. OSINT using theHarvester
+Collected publicly available information related to the target domain and identified accessible URLs.
+![OSINT using theHarvester](screenshots/osint-theharvester.jpg)
+
+5. Nessus Installation and Configuration
+Installed Nessus Essentials and verified that the vulnerability scanning service was running successfully.
+![Nessus Setup](screenshots/nessus-setup.jpg)
+
+6. Nessus Vulnerability Scan Results
+Performed a vulnerability assessment using Nessus and reviewed the scan results.
+![Nessus Scan Results](screenshots/nessus-scan-results.jpg)
+
+Project Outcome
+This project demonstrates practical experience in information gathering, enumeration, OSINT, and vulnerability assessment techniques commonly used during the reconnaissance phase of penetration testing engagements.
 
 Disclaimer
-
 This project was conducted in a controlled laboratory environment for educational and ethical cybersecurity training purposes only.
