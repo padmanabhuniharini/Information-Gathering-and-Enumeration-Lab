@@ -1,0 +1,60 @@
+Information Gathering and Enumeration Lab
+Objective
+
+To perform reconnaissance, enumeration, and vulnerability assessment on a target system in a controlled laboratory environment.
+
+Tools Used
+
+* Nmap
+* SMBClient
+* Enum4linux
+* theHarvester
+* Nessus
+* Kali Linux
+
+Activities Performed
+
+Host Discovery
+Performed host discovery to determine whether the target system was active and reachable.
+
+Service Detection
+Conducted service and version detection to identify exposed network services.
+
+SMB Enumeration
+Attempted enumeration of SMB services, shares, users, and system information.
+
+Open-Source Intelligence (OSINT)
+Used theHarvester to collect publicly available information related to the target domain.
+
+Vulnerability Assessment
+Configured and executed a Nessus vulnerability scan to identify security weaknesses.
+
+Results
+
+* Confirmed target availability.
+* Gathered service information.
+* Identified publicly accessible resources.
+* Performed vulnerability assessment using Nessus.
+* Documented findings and observations.
+
+Skills Demonstrated
+
+* Information Gathering
+* OSINT
+* Network Enumeration
+* Service Enumeration
+* SMB Enumeration
+* Vulnerability Assessment
+* Security Analysis
+
+Screenshots
+
+* Host Discovery Results
+* Service Detection Results
+* SMB Enumeration Results
+* theHarvester Results
+* Nessus Scan Results
+
+Disclaimer
+
+This project was conducted in a controlled laboratory environment for educational and ethical cybersecurity training purposes only.
