@@ -87,7 +87,7 @@ Skills Demonstrated
 Screenshots
  1. Host Discovery
 Performed host discovery using Nmap to verify whether the target host was active and reachable.
-![Host Discovery](screenshots/host-discovery.jpg)
+![Host Discovery](host-discovery.jpg)
 
 2. Service Detection
 Executed service and version detection to identify exposed services and determine whether open ports were available on the target.
