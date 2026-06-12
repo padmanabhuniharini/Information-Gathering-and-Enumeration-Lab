@@ -87,29 +87,35 @@ Skills Demonstrated
 Screenshots
  1. Host Discovery
 Performed host discovery using Nmap to verify whether the target host was active and reachable.
+
 ![Host Discovery](screenshots/host-discovery.jpg)
 
 
 2. Service Detection
 Executed service and version detection to identify exposed services and determine whether open ports were available on the target.
+
 ![Service Detection](screenshots/service-detection.jpg)
 
 
 3. SMB Enumeration
 Attempted SMB enumeration using SMBClient and Enum4linux to identify shares, users, and system information.
+
 ![SMB Enumeration](screenshots/smb-enumeration.jpg)
 
 
 4. OSINT using theHarvester
 Collected publicly available information related to the target domain and identified accessible URLs.
+
 ![OSINT using theHarvester](screenshots/osint-theharvester.jpg)
 
 5. Nessus Installation and Configuration
 Installed Nessus Essentials and verified that the vulnerability scanning service was running successfully.
+
 ![Nessus Setup](screenshots/nessus-setup.jpg)
 
 6. Nessus Vulnerability Scan Results
 Performed a vulnerability assessment using Nessus and reviewed the scan results.
+
 ![Nessus Scan Results](screenshots/nessus-scan-results.jpg)
 
 Project Outcome
